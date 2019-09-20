@@ -1,14 +1,14 @@
 class FormController {
 
     async get(req, resp, next) {
-        return resp.status(200).send({
-            "message": "form saved"
-        })
+        const mock = require("./formMock.json");
+        resp.send(mock); 
     }
 
     async create(req, res) {
-        res.send("message: " + req.params.id);
-        
+        return res.status(200).send({
+            "message": "form saved"
+        })
     }
 
 }

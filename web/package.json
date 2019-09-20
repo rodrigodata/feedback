@@ -4,6 +4,7 @@
   "description": "Checkout responsável em processar pagamentos.",
   "main": "server.js",
   "scripts": {
+    "nodemon": "nodemon server.js",
     "install:only:setup": "npm run install:only:prod",
     "install:only:prod": "npm install --only=prod"
   },

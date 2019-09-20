@@ -4,6 +4,7 @@
   "description": "API destinada a receber pagamentos e consultar de pagamentos de determinados clientes",
   "main": "server.js",
   "scripts": {
+    "nodemon": "nodemon server.js",
     "install:only:setup": "npm run install:only:prod & npm run install:only:dev",
     "install:only:prod": "npm install --only=prod",
     "install:only:dev": "npm install --only=dev",
@@ -38,6 +39,7 @@
     "lodash": "4.17.11",
     "module-alias": "2.2.0",
     "mysql2": "^1.7.0",
+    "nodemon": "^1.19.2",
     "sequelize": "^5.19.0"
   },
   "devDependencies": {
