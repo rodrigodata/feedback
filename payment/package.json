@@ -1,0 +1,58 @@
+{
+  "name": "payments",
+  "version": "0.0.1",
+  "description": "API destinada a receber pagamentos e consultar de pagamentos de determinados clientes",
+  "main": "server.js",
+  "scripts": {
+    "install:only:setup": "npm run install:only:prod & npm run install:only:dev",
+    "install:only:prod": "npm install --only=prod",
+    "install:only:dev": "npm install --only=dev",
+    "tests:unit": "mocha '__tests__/business_logic/**spec.js'",
+    "tests:api": "mocha '__tests__/api/**spec.js'",
+    "tests:benchmark": "node __benchmark__/benchmark.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigodata/payment-api.git"
+  },
+  "keywords": [
+    "nodejs",
+    "api",
+    "express",
+    "docker",
+    "compose",
+    "mongodb"
+  ],
+  "author": "Rodrigo Andrade <data@rodrigoandrade.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigodata/payment-api/issues"
+  },
+  "homepage": "https://github.com/rodrigodata/payment-api#readme",
+  "dependencies": {
+    "express": "4.16.4",
+    "celebrate": "10.0.0",
+    "body-parser": "1.18.3",
+    "cors": "2.8.5",
+    "lodash": "4.17.11",
+    "module-alias": "2.2.0",
+    "compression": "1.7.4",
+    "helmet": "3.18.0"
+  },
+  "devDependencies": {
+    "mocha": "6.1.4",
+    "chai": "4.2.0",
+    "supertest": "4.0.2",
+    "autocannon": "3.2.2"
+  },
+  "_moduleAliases": {
+    "@models": "./app/models",
+    "@services": "./app/services",
+    "@builders": "./app/builders",
+    "@constants": "./app/constants",
+    "@controllers": "./app/controllers",
+    "@validationsv1": "./app/routes/v1/validations",
+    "@middlewares": "./app/middlewares",
+    "@helpers": "./app/helpers"
+  }
+}
