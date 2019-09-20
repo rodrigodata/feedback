@@ -1,35 +1,23 @@
 {
     "form": {
-        "id": {
-            "type": 1,
-            "primaryKey": true
-        },
+        "id": 1,
         "title": "HackDay",
         "description": "Reunião para expor os projetos do hackday",
         "date": "2019-09-20T16:28:43.511Z",
         "questions": [
             {
-                "id": {
-                    "type": 1,
-                    "primaryKey": true
-                },
+                "id": 1,
                 "text": "Essa reunião agregou valor a nossas vidas?",
                 "question_sequence": 1,
                 "answers": [
                     {
-                        "id": {
-                            "type": 1,
-                            "primaryKey": true
-                        },
+                        "id": 1,
                         "question_id": 1,
                         "text": "Agregou pois graças a ela pude expor minhas ideias de projetos pessoais",
                         "username": "Rodrigo"
                     },
                     {
-                        "id": {
-                            "type": 2,
-                            "primaryKey": true
-                        },
+                        "id": 2,
                         "question_id": 1,
                         "text": "Agregou pois tive oportunidade de trabalhar com outras pessoas da empresa",
                         "username": "Vanessa"
@@ -37,18 +25,12 @@
                 ]
             },
             {
-                "id": {
-                    "type": 2,
-                    "primaryKey": true
-                },
+                "id": 2,
                 "text": "Qual projeto foi o mais Legal de todos",
                 "question_sequence": 2,
                 "answers": [
                     {
-                        "id": {
-                            "type": 3,
-                            "primaryKey": true
-                        },
+                        "id": 3,
                         "question_id": 2,
                         "text": "MeetingBex",
                         "username": "Eden"
@@ -56,18 +38,12 @@
                 ]
             },
             {
-                "id": {
-                    "type": 3,
-                    "primaryKey": true
-                },
+                "id": 3,
                 "text": "Considerariam participar novamente do hackday? Por que?",
                 "question_sequence": 3,
                 "answers": [
                     {
-                        "id": {
-                            "type": 4,
-                            "primaryKey": true
-                        },
+                        "id": 4,
                         "question_id": 3,
                         "text": "Sim, pois tem uma comida muito show",
                         "username": "Anônimo"
