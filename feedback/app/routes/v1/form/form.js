@@ -6,6 +6,7 @@ const FormController = require("../../../controllers/form/form");
 
 router
   .route("/form/:id")
-  .post(FormController.create); 
+  .post(FormController.create)
+  .get(FormController.get)
 
 module.exports = router;
