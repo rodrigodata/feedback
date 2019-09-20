@@ -4,7 +4,9 @@ COPY . /app
 
 WORKDIR /app
 
-RUN npm run install:only:setup
+RUN npm install
+
+RUN sequelize db:migrate
 
 EXPOSE 3000
 

@@ -1,4 +1,4 @@
-const models = require("./models/index");
+const models = require("./app/models/index");
 
 models.sequelize.sync().then(() => {
   console.log("Conexão efetuada!")

@@ -1,4 +1,5 @@
-module.exports = {
+module.exports = () => {
+  
     up: (queryInterface, DataTypes) => {
       return queryInterface.createTable('form', {
         id: {
@@ -20,9 +21,9 @@ module.exports = {
           type: DataTypes.DATE,
         },
       });
-    },
+    };
   
     down: (queryInterface) => {
       return queryInterface.dropTable('form');
-    }
+    };
   };
