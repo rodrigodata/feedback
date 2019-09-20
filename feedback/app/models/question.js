@@ -1,30 +1,10 @@
-module.exports = {
-    up: (queryInterface, DataTypes) => {
-        return queryInterface.createTable('question', {
-            id: {
-                allowNull: false,
-                autoIncrement: true,
-                primaryKey: true,
-                type: DataTypes.INTEGER,
-            },
-            form_id: {
-                allowNull: false,
-                type: Sequelize.INTEGER,
-                references: 'form',
-                referencesKey: 'id'
-            },
-            text: {
-                allowNull: false,
-                type: DataTypes.STRING,
-            },
-            question_sequence: {
-                allowNull: false,
-                type: DataTypes.INTEGER,
-            }
-        });
-    },
+module.exports = (sequelize, DataTypes) => {
+    const Question = sequelize.define('Question', {
+        id: DataTypes.INTEGER,
+        form_id: DataTypes.INTEGER,
+        text: DataTypes.STRING,
+        question_sequence: DataTypes.INTEGER
+    });
 
-    down: (queryInterface) => {
-        return queryInterface.dropTable('question');
-    }
-};
+    return Question;
+}
