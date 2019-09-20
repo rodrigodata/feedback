@@ -7,7 +7,6 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require('../../config/config.json')[env];
 const db = {};
-const migrations_path = "/app/app/migrations";
 
 config.host = "db";
 
@@ -18,15 +17,13 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-console.log(__dirname);
 fs
-  .readdirSync(migrations_path)
+  .readdirSync(__dirname)
   .filter(file => {
     return (file != undefined & file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(file => {
-    console.log(file);
-    const model = sequelize.import(path.join(migrations_path, file));
+    const model = sequelize.import(path.join(__dirname, file));
     
     db[model.name] = model;
   });
