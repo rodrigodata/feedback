@@ -1,4 +1,4 @@
 /* Importing all Payment routes */
-const router = require("./Feedback");
+const router = require("./feedback");
 
 module.exports = router;

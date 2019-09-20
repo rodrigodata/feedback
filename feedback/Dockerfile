@@ -6,8 +6,6 @@ WORKDIR /app
 
 RUN npm install
 
-RUN npx sequelize db:migrate
-
 EXPOSE 3000
 
 CMD npm start

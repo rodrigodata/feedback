@@ -27,10 +27,10 @@ app.use(urlencoded({ extended: false }));
 app.use(json());
 
 /* Database configuration */
-require("./database");
+//require("./database");
 
 /* Import Models */
-require("./app/models");
+//require("./app/models");
 
 /* Routes configuration */
 app.use(require("./app/routes"));
