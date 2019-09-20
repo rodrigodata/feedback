@@ -2,6 +2,6 @@
 const router = require("express").Router();
 
 /* Payment Route */
-router.use("/", require("./payment"));
+// router.use("/", require("./payment"));
 
 module.exports = router;

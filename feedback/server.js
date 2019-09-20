@@ -16,7 +16,7 @@ app.use(compression());
 app.use(helmet());
 
 /* Import Middlewares */
-const ErrorHandlingMiddleware = require("@middlewares/ErrorHandling");
+//const ErrorHandlingMiddleware = require("@middlewares/ErrorHandling");
 
 /* Disable headers etag and x-powered-by. { SECURITY & PERFORMANCE } */
 app.disable("etag").disable("etag");
@@ -39,7 +39,7 @@ app.use(require("./app/routes"));
 app.use(errors());
 
 /* Middleware to custom error handling */
-app.use(ErrorHandlingMiddleware.error);
+//app.use(ErrorHandlingMiddleware.error);
 
 /* Bootstrap application */
 var server = app.listen(process.env.PORT || 3000, function() {
