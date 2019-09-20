@@ -6,5 +6,9 @@ module.exports = (sequelize, DataTypes) => {
         date: DataTypes.DATE
     });
 
+    Form.associate = (models) => {
+        Form.hasMany(models.question);
+    };
+
     return Form;
 }
