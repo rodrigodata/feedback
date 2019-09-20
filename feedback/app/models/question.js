@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Question.associate = (models) => {
         Question.belongsTo(models.form);
+        Question.hasMany(models.answer);
     };
 
     return Question;

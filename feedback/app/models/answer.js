@@ -6,5 +6,9 @@ module.exports = (sequelize, DataTypes) => {
         username: DataTypes.STRING
     });
 
+    Answer.associate = (models) => {
+        Answer.belongsTo(models.question);
+    };
+
     return Answer;
 }
