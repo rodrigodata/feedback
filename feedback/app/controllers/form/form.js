@@ -1,16 +1,21 @@
 class FormController {
 
-    async get(req, resp, next) {
+    async getFormAnswers(req, resp, next) {
         const mock = require("./formMock.json");
         resp.send(mock); 
     }
 
-    async create(req, res) {
+    async createForm(req, res) {
         return res.status(200).send({
-            "message": "form saved"
+            "message": "form saved successfully!"
         })
     }
 
+    async answerForm(req, res) {
+        return res.status(200).send({
+            "message": "answers saved successfully!"
+        })
+    }
 }
 
 module.exports = new FormController();
