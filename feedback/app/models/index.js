@@ -22,7 +22,7 @@ console.log(__dirname);
 fs
   .readdirSync(migrations_path)
   .filter(file => {
-    return (file != undefined & file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js' && file.includes(".model."));
+    return (file != undefined & file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(file => {
     console.log(file);
